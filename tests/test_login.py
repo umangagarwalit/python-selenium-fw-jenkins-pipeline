@@ -23,3 +23,16 @@ def test_01(setup_teardown):
     assert utility.get_page_title(driver) == "ParaBank | Accounts Overview", "Page title does not match"
 
     print(utility.get_page_title(driver))
+
+
+def test_02(setup_teardown):
+    driver = setup_teardown
+    login_page = LoginPage(driver)
+
+    home_page = login_page.do_login(config.username_value, config.password_value)
+
+    time.sleep(2)
+
+    assert utility.get_page_title(driver) == "ParaBank | Accounts Overview123", "Page title does not match"
+
+    print(utility.get_page_title(driver))
