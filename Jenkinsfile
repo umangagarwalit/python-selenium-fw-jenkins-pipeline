@@ -19,8 +19,10 @@ pipeline {
             steps {
                 //bat 'pytest -s -v tests\\test_login.py --html=reports/report.html --self-contained-html --capture=tee-sys'
 				//bat 'pytest -s -v tests\\ --html=reports/report.html --self-contained-html --capture=tee-sys'
-				bat 'pytest -s -v tests\\test_login_class.py::Test_Class_Login --html=reports/report.html --self-contained-html --capture=tee-sys'
-            }
+				//bat 'pytest -s -v tests\\test_login_class.py::Test_Class_Login --html=reports/report.html --self-contained-html --capture=tee-sys'
+				bat 'pytest -s -v tests\\test_login.py::test_02 --html=reports/report.html --self-contained-html --capture=tee-sys'
+				
+			}
         }
     }
 }
